@@ -94,9 +94,9 @@ def requested():
     msg = "Need Plasma of your blood group for: "+address
     while data != False:
         print ("The Phone is : ", data["PHONE"])
-        url="https://www.fast2sms.com/dev/bulk?authorization=xCXuwWTzyjOD2ARd1EngbH3a7tKIq5PklJ8YSf0Lh4FQZecs9iNI1dSvuqprxFwCKYJXA5amQkBE36Rl&sender_id=FSTSMS&message="+msg+"&language=english&route=p&numbers="+str(data["PHONE"])
-        result=requests.request("GET",url)
-        print(result)
+        #url="https://www.fast2sms.com/dev/bulk?authorization=xCXuwWTzyjOD2ARd1EngbH3a7tKIq5PklJ8YSf0Lh4FQZecs9iNI1dSvuqprxFwCKYJXA5amQkBE36Rl&sender_id=FSTSMS&message="+msg+"&language=english&route=p&numbers="+str(data["PHONE"])
+        #result=requests.request("GET",url)
+        #print(result)
         data = ibm_db.fetch_assoc(stmt)
     return render_template('request.html', pred="Your request is sent to the concerned people.")
     
