@@ -98,7 +98,7 @@ def requested():
         result=requests.request("GET",url)
         print(result)
         data = ibm_db.fetch_assoc(stmt)
-    return render_template('request.html', pred="request is sent to the concerned people.")
+    return render_template('request.html', pred="Your request is sent to the concerned people.")
     
 
 if __name__ == "__main__":
